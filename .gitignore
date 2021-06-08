@@ -110,3 +110,4 @@ out/
 
 # Code Recommenders
 .recommenders/
+/classes/
