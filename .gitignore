@@ -88,6 +88,9 @@ out/
 
 #Eclipse
 .settings
+.project
+.classpath
+
 .loadpath
 .recommenders
 # Locally stored "Eclipse launch configurations"
