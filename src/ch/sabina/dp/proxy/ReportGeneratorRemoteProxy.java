@@ -13,10 +13,10 @@ import java.util.Date;
  *	• A protection proxy controls access to the original object. Protection proxies are useful when objects should have different
  * access rights
  */
-public class RemoteProxy extends UnicastRemoteObject implements ReportGenerator{
+public class ReportGeneratorRemoteProxy extends UnicastRemoteObject implements ReportGenerator{
 	private static final long serialVersionUID = 3107413009881629428L;
 	
-	protected RemoteProxy() throws RemoteException {
+	protected ReportGeneratorRemoteProxy() throws RemoteException {
 	}
 	
 	@Override
@@ -34,12 +34,14 @@ public class RemoteProxy extends UnicastRemoteObject implements ReportGenerator{
 	
 	public static void testRemoteProxy() {
 		try {
-			ReportGenerator reportGenerator = new RemoteProxy();
+			ReportGenerator reportGenerator = new ReportGeneratorRemoteProxy();
 				Naming.rebind("PizzaCoRemoteGenerator", reportGenerator);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 
 	}
+	
+	
 
 }
