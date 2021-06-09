@@ -14,6 +14,7 @@ import java.util.Date;
  * access rights
  */
 public class ReportGeneratorRemoteProxy extends UnicastRemoteObject implements ReportGenerator{
+	
 	private static final long serialVersionUID = 3107413009881629428L;
 	
 	protected ReportGeneratorRemoteProxy() throws RemoteException {
@@ -21,7 +22,7 @@ public class ReportGeneratorRemoteProxy extends UnicastRemoteObject implements R
 	
 	@Override
 	public String generateDailyReport() throws RemoteException {
-	StringBuilder sb = new StringBuilder();
+		StringBuilder sb = new StringBuilder();
 		sb.append("********************Location X Daily Report********************");
 		sb.append("\\n Location ID: 012");
 		sb.append("\\n Today’s Date: "+new Date());
@@ -29,19 +30,10 @@ public class ReportGeneratorRemoteProxy extends UnicastRemoteObject implements R
 		sb.append("\\n Total Price: $2534");
 		sb.append("\\n Net Profit: $1985");
 		sb.append("\\n ***************************************************************");
-	return sb.toString();
+		return sb.toString();
 	}
 	
-	public static void testRemoteProxy() {
-		try {
-			ReportGenerator reportGenerator = new ReportGeneratorRemoteProxy();
-				Naming.rebind("PizzaCoRemoteGenerator", reportGenerator);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
 
-	}
-	
 	
 
 }
