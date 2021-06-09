@@ -1,4 +1,4 @@
-package ch.sabina.dp.proxy;
+package ch.sabina.dp.proxy.remote;
 
 import java.rmi.Naming;
 
