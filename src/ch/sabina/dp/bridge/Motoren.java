@@ -1,14 +1,15 @@
 package ch.sabina.dp.bridge;
 
 public class Motoren extends Car {
-
-	private final Product product;
-	private final String carType;
+	/*
+	 * private final Product product; private final String carType;
+	 */
 	
 	public Motoren(Product product, String carType) {
 		super(product, carType);
-		this.product = product;
-		this.carType = carType;
+		/*
+		 * this.product = product; this.carType = carType;
+		 */
 	}
 	
 	@Override
@@ -18,8 +19,8 @@ public class Motoren extends Car {
 	
 	@Override
 	public void produceProduct() {
-		product.produce();
-		System.out.println("Modifing product "+product.productName()+" according to	"+carType);
+		super.product.produce();
+		System.out.println("Modifing product "+product.productName()+" according to	"+super.carType);
 	}
 
 }

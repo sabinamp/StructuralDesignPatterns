@@ -1,8 +1,8 @@
 package ch.sabina.dp.bridge;
 
 public abstract class Car {
-	private final Product product;
-	private final String carType;
+	protected final Product product;
+	protected final String carType;
 	
 	public Car(Product product,String carType){
 		this.product = product;
