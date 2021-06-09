@@ -1,6 +1,7 @@
 package ch.sabina.dp.proxy.virtual;
 
 public class Employee {
+	
 	private String employeeName;
 	private double employeeSalary;
 	private String employeeDesignation;
@@ -24,7 +25,7 @@ public class Employee {
 	}
 	
 	public String toString(){
-	return "Employee Name: "+employeeName+", EmployeeDesignation: "+employeeDesignation+", Employee Salary: "+employeeSalary;
+		return "Employee Name: "+employeeName+", EmployeeDesignation: "+employeeDesignation+", Employee Salary: "+employeeSalary;
 	}
 
 }

@@ -4,13 +4,13 @@ public class Company {
 	private String companyName;
 	private String companyAddress;
 	private String companyContactNo;
-	private ContactList contactList ;
+	private ContactList contactListImpl ;
 	
 	public Company(String companyName,String companyAddress, String companyContactNo, ContactList contactList){
 		this.companyName = companyName;
 		this.companyAddress = companyAddress;
 		this.companyContactNo = companyContactNo;
-		this.contactList = contactList;
+		this.contactListImpl = contactList;
 		System.out.println("Company object created...");
 	}
 	
@@ -26,7 +26,7 @@ public class Company {
 		return companyContactNo;
 	}
 	
-	public ContactList getContactList(){
-		return contactList;
+	public ContactList getContactListImpl(){
+		return contactListImpl;
 	}
 }

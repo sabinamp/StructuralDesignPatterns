@@ -19,7 +19,7 @@ public class TestVirtualProxy {
 		Company c = new Company("ABC Company", "India", "+91-011-28458965", cList);
 		System.out.println("Requesting for contact list");
 		
-		List<Employee> empList  = c.getContactList().getContactList();
+		List<Employee> empList  = c.getContactListImpl().getContactList();
 		
 		for(Employee emp : empList){
 			System.out.println(emp);
